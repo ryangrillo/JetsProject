@@ -4,12 +4,10 @@ public class Jet {
 
 	private String Model;
 	private String Pilot;
-	private int machSpeed;
+	private double machSpeed;
 	private int mphSpeed;
 	private int range;
 	private double price;
-	
-	
 	
 	public Jet() {
 		
@@ -27,6 +25,8 @@ public class Jet {
 		super();
 		Model = model;
 		Pilot = pilot;
+		this.mphSpeed = mphSpeed;
+		this.machSpeed = getMachSpeed();
 		this.range = range;
 		this.price = price;
 	}
@@ -47,11 +47,11 @@ public class Jet {
 		Pilot = pilot;
 	}
 
-	public int getMachSpeed() {
-		return this.mphSpeed/761;
+	public double getMachSpeed() {
+		return this.mphSpeed/761.0;
 	}
 
-	public void setMachSpeed(int machSpeed) {
+	public void setMachSpeed(double machSpeed) {
 		this.machSpeed = machSpeed;
 	}
 
@@ -78,6 +78,7 @@ public class Jet {
 	public void setPrice(double price) {
 		this.price = price;
 	}
+
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
@@ -94,6 +95,7 @@ public class Jet {
 		builder.append("]");
 		return builder.toString();
 	}
+
 	
 	
 

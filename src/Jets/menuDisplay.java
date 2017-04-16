@@ -14,7 +14,7 @@ public class menuDisplay {
 		 System.out.println("-----                                           -----");
 		 System.out.println("-----		4. Add Jet to fleet             -----");
 		 System.out.println("-----                                           -----");
-		 System.out.println("-----		5. Hire Pilot                   -----");
+		 System.out.println("-----		5. Hire Pilot **under contstr** -----");
 		 System.out.println("-----                                           -----");
 		 System.out.println("----- 		6. Quit                         -----");
 		 System.out.println("----- 		                                -----");
