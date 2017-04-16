@@ -1,8 +1,13 @@
+package Jets;
 
 public class Pilot {
 	private String name;
 	private float Salary;
+
 	
+	public Pilot() {
+	}
+
 	public Pilot(String name, float salary) {
 		super();
 		this.name = name;
@@ -24,5 +29,5 @@ public class Pilot {
 	public void setSalary(float salary) {
 		Salary = salary;
 	}
-	
+
 }
