@@ -67,8 +67,7 @@ public class InputManager {
 		System.out.print("Model: ");
 		String model = kb.next();
 		System.out.println("Pilot Name: ");
-		String pilotName = kb.nextLine();
-		kb.nextLine();
+		String pilotName = kb.next();
 		System.out.println("Pilot Salary: ");
 		float pilotSalary = kb.nextFloat();
 		System.out.print("Speed in mph: ");
