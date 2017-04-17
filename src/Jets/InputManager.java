@@ -14,7 +14,6 @@ public class InputManager {
 
 		boolean keepGoing = true;
 		while (keepGoing) {
-			System.out.print("Choose an option. 1-5:  (6) to quit");
 			System.out.println();
 			menuDisplay m = new menuDisplay();
 			m.menu();
@@ -49,9 +48,6 @@ public class InputManager {
 			case 7:
 				System.out.println("Goodbye");
 				keepGoing = false;
-				break;
-				
-			
 			}// end chooseMenuOption method
 		}
 		kb.close();
