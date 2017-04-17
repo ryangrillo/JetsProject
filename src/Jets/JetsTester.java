@@ -12,8 +12,7 @@ public class JetsTester {
 		menuDisplay m = new menuDisplay();
 		m.menu();
 		Hangar hangar = new Hangar();
-		PilotDorm d = new PilotDorm();
-		
+		PilotDorm d = new PilotDorm();		
 		Pilot pilots[] = pilotList();
 		d.setPilot(pilots);
 		Jet[] jets = jetList(pilots);
@@ -23,8 +22,6 @@ public class JetsTester {
 	}
 
 	public Jet[] jetList(Pilot[] pilots) {
-
-		
 
 		Jet[] jet = new Jet[5];
 		jet[0] = new Jet("A340", pilots[0], 567, 7800, 87_000_000.0);

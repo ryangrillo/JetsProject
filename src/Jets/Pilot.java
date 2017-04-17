@@ -4,10 +4,12 @@ public class Pilot {
 	private String name;
 	private float Salary;
 
+
 	
 	public Pilot() {
 	}
-
+	
+	
 	public Pilot(String name, float salary) {
 		super();
 		this.name = name;

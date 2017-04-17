@@ -10,6 +10,7 @@ public class InputManager {
 	public void chooseMenuOption(Hangar hangar, PilotDorm pilotDorm) {
 		h = hangar;
 		p = pilotDorm;
+		
 
 		boolean keepGoing = true;
 		while (keepGoing) {
@@ -33,17 +34,24 @@ public class InputManager {
 				Jet longest = h.getlongestRange();
 				System.out.println(longest);
 				break;
-			case 4: 
+			case 4:
 				System.out.println("Please enter: ");
 				addJet();
 				break;
 			case 5:
-				addPilot();
-				//listPilots();
+				addJetWithRandom();
+				displayFleet();
 				break;
 			case 6:
+				addPilot();
+				listPilots();
+				break;
+			case 7:
 				System.out.println("Goodbye");
 				keepGoing = false;
+				break;
+				
+			
 			}// end chooseMenuOption method
 		}
 		kb.close();
@@ -51,7 +59,7 @@ public class InputManager {
 
 	public void displayFleet() {
 		for (int i = 0; i < h.getJets().length; i++) {
-				System.out.println(h.getJets()[i]);
+			System.out.println(h.getJets()[i]);
 		}
 	}
 
@@ -59,7 +67,8 @@ public class InputManager {
 		System.out.print("Model: ");
 		String model = kb.next();
 		System.out.print("Pilot Name: ");
-		String pilotName = kb.next();
+		String pilotName = kb.nextLine();
+		kb.nextLine();
 		System.out.print("Pilot Salary: ");
 		float pilotSalary = kb.nextFloat();
 		System.out.print("Speed in mph: ");
@@ -77,26 +86,41 @@ public class InputManager {
 		// create a new Jet passing fields into constructor
 		// h.addjet(newJet);
 	}
+
 	public void addPilot() {
 		System.out.print("Pilot Name: ");
 		String pilotName = kb.next();
 		System.out.print("Pilot Salary: ");
 		float pilotSalary = kb.nextFloat();
-		
+
 		Pilot pilot = new Pilot(pilotName, pilotSalary);
 		p.addPilot(pilot);
-		
-		// ask user for input
-		// create a new Jet passing fields into constructor
-		// h.addjet(newJet);
+
 	}
-	
-	public void listPilots(){
+
+	public void listPilots() {
 		for (int i = 0; i < p.getPilot().length; i++) {
 			System.out.println(p.getPilot()[i]);
+		}
 	}
+	public int addRandom() {
+		 int randomNumber = (int) (Math.random() * p.getPilot().length + 1);
+		 return randomNumber;
 	}
-	
-	
+	public void addJetWithRandom() {
+		System.out.print("Model: ");
+		String model = kb.next();
+		System.out.print("Speed in mph: ");
+		int mphSpeed = kb.nextInt();
+		System.out.print("range: ");
+		int range = kb.nextInt();
+		System.out.print("Price: ");
+		Double price = kb.nextDouble();
+
+		 Pilot p1 = p.getPilot()[addRandom()];
+		//Pilot p = new Pilot(pilotName, pilotSalary);
+		Jet jet = new Jet(model, p1, mphSpeed, range, price);
+		h.addJet(jet);
+	}
 
 }

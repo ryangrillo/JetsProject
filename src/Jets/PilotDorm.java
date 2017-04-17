@@ -1,7 +1,5 @@
 package Jets;
 
-
-
 public class PilotDorm {
 	private Pilot[] pilot;
 
