@@ -8,9 +8,6 @@ public class JetsTester {
 	}
 
 	public void start() {
-
-		menuDisplay m = new menuDisplay();
-		m.menu();
 		Hangar hangar = new Hangar();
 		PilotDorm d = new PilotDorm();		
 		Pilot pilots[] = pilotList();
