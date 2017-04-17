@@ -66,10 +66,10 @@ public class InputManager {
 	public void addJet() {
 		System.out.print("Model: ");
 		String model = kb.next();
-		System.out.print("Pilot Name: ");
+		System.out.println("Pilot Name: ");
 		String pilotName = kb.nextLine();
 		kb.nextLine();
-		System.out.print("Pilot Salary: ");
+		System.out.println("Pilot Salary: ");
 		float pilotSalary = kb.nextFloat();
 		System.out.print("Speed in mph: ");
 		int mphSpeed = kb.nextInt();

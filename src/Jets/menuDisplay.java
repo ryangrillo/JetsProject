@@ -19,6 +19,7 @@ public class menuDisplay {
 		 System.out.println("----- 		6. Hire Pilot                   -----");
 		 System.out.println("----- 		                                -----");
 		 System.out.println("----- 		7. Quit Program                 -----");
+		 System.out.println("-----                                           -----");
 		 System.out.println("*****************************************************");
 		 System.out.println("*****************************************************");
 	}
