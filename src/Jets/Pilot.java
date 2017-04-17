@@ -30,4 +30,15 @@ public class Pilot {
 		Salary = salary;
 	}
 
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("Pilot [name=");
+		builder.append(name);
+		builder.append(", Salary=");
+		builder.append(Salary);
+		builder.append("]");
+		return builder.toString();
+	}
+
 }

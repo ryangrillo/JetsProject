@@ -3,7 +3,7 @@ package Jets;
 public class Jet {
 
 	private String Model;
-	private String Pilot;
+	private Pilot pilot;
 	private double machSpeed;
 	private int mphSpeed;
 	private int range;
@@ -13,18 +13,18 @@ public class Jet {
 		
 	}
 
-	public Jet(String model, String pilot, int machSpeed, int mphSpeed, int range, double price) {
+	public Jet(String model, Pilot pilot, int machSpeed, int mphSpeed, int range, double price) {
 		super();
 		Model = model;
-		Pilot = pilot;
+		this.pilot = pilot;
 		this.machSpeed = machSpeed;
 		this.range = range;
 		this.price = price;
 	}
-	public Jet(String model, String pilot, int mphSpeed, int range, double price) {
+	public Jet(String model, Pilot pilot, int mphSpeed, int range, double price) {
 		super();
 		Model = model;
-		Pilot = pilot;
+		this.pilot = pilot;
 		this.mphSpeed = mphSpeed;
 		this.machSpeed = getMachSpeed();
 		this.range = range;
@@ -39,12 +39,12 @@ public class Jet {
 		Model = model;
 	}
 
-	public String getPilot() {
-		return Pilot;
+	public Pilot getPilot() {
+		return pilot;
 	}
 
-	public void setPilot(String pilot) {
-		Pilot = pilot;
+	public void setPilot(Pilot pilot) {
+		this.pilot = pilot;
 	}
 
 	public double getMachSpeed() {
@@ -85,7 +85,7 @@ public class Jet {
 		builder.append("Jet [Model=");
 		builder.append(Model);
 		builder.append(", Pilot=");
-		builder.append(Pilot);
+		builder.append(pilot);
 		builder.append(", machSpeed=");
 		builder.append(machSpeed);
 		builder.append(", range=");

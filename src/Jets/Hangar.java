@@ -8,7 +8,7 @@ public class Hangar {
 		return jets;
 	}
 
-	public void setJets(Jet[] jets) {
+	public void setJets(Jet[]	jets) {
 		this.jets = jets;
 	}
 
@@ -24,7 +24,6 @@ public class Hangar {
 	public Jet getFastest() {
 		Jet fastest = jets[0];
 		for (int i = 0; i < jets.length; i++) {
-			//System.out.println(jets[i].getMphSpeed());
 			if (jets[i].getMachSpeed() > fastest.getMachSpeed()) {
 				fastest = jets[i];
 			}
